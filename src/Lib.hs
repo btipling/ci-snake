@@ -1,6 +1,11 @@
 module Lib
-    ( someFunc
+    ( runGame
     ) where
 
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+import Brick
+
+ui :: Widget ()
+ui = str "Hello, world!"
+
+runGame :: IO ()
+runGame = simpleMain ui
