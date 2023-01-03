@@ -34,6 +34,7 @@ library
   build-depends:
       base >=4.7 && <5
     , brick
+    , vty
   default-language: Haskell2010
 
 executable ci-snake-exe
@@ -47,6 +48,7 @@ executable ci-snake-exe
       base >=4.7 && <5
     , brick
     , ci-snake
+    , vty
   default-language: Haskell2010
 
 test-suite ci-snake-test
@@ -61,4 +63,5 @@ test-suite ci-snake-test
       base >=4.7 && <5
     , brick
     , ci-snake
+    , vty
   default-language: Haskell2010
