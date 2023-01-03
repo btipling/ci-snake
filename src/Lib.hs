@@ -16,7 +16,8 @@ newtype St = St Int deriving Show
 type Name = ()
 
 handleEvent :: T.BrickEvent Name e -> T.EventM Name St ()
-handleEvent _ = return ()
+handleEvent (T.VtyEvent (V.EvKey (V.KChar 'c') [V.MCtrl])) = M.halt
+handleEvent  _                                             = return ()
 
 noopAttr :: M.AttrName
 noopAttr = M.attrName "attr"
